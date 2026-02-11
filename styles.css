@@ -1,0 +1,95 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Map Styles */
+#mapid { 
+    height: 300px; 
+    width: 100%; 
+    border-radius: 0.5rem; 
+    z-index: 1; 
+}
+
+#tracking-map { 
+    height: 400px; 
+    width: 100%; 
+    border-radius: 0.5rem; 
+    z-index: 1; 
+}
+
+.leaflet-routing-container { 
+    display: none !important; 
+}
+
+/* Vehicle Marker Rotation Style */
+.vehicle-icon {
+    transition: transform 0.1s linear; /* Smooth rotation transition */
+    transform-origin: center center;
+}
+
+/* --- ANIMATIONS --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-fade-in {
+    animation: pageFadeIn 0.4s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+    from { 
+        opacity: 0; 
+        transform: scale(0.98); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+.hover-card {
+    transition: all 0.3s ease-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-click:active {
+    transform: scale(0.95);
+}
